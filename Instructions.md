@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 
 In this tutorial, you learn how to integrate Salesforce with Azure Active Directory (Azure AD). The scenario outlined in this tutorial consists of:
 
@@ -17,9 +17,9 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 •	Valid email account
 
 
-#Integrate Salesforce with Azure Active Directory for Single sign-on
+# Integrate Salesforce with Azure Active Directory for Single sign-on
 
-##Task 1: Create a Salesforce developers account
+## Task 1: Create a Salesforce developers account
 
 1.	Sign up for a Salesforce developer instance using a valid email address.
 2.	Go to your email inbox to verify the account. After login for the first time, Salesforce may send an extra verification code to your email.
@@ -32,14 +32,14 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 9.	Click on Register Domain. It can take few minutes to update its naming. You will receive an email when it’s done. The domain follows the pattern: *https://<subdomain>-dev-ed.my.salesforce.com*
 
 
-##Task 2: Add Salesforce from the gallery
+## Task 2: Add Salesforce from the gallery
 
 10.	In the [Azure portal](https://portal.azure.com/), on the left navigation panel, click **Azure Active Directory** icon.
 11.	Navigate to **Enterprise applications**. Then go to **All applications**.
 12.	To add new application, click **New application** button on the top of dialog.
 13.	In the search box, type Salesforce, select Salesforce from result panel then click **Add** button to add the application.
 
-##Task 3: Assign a test user to the application
+## Task 3: Assign a test user to the application
 
 14.	In the menu on the left, click **Users and groups.**
 15.	Click **Add user** button. Then select **Users** on Add Assignment dialog.
@@ -47,7 +47,7 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 17.	On **Select Role** dialog, select Chatter External User. Click **Select** button. 
 18.	Click **Assign** button on **Add Assignment** dialog.
 
-##Task 4: Enable automated user provisioning
+## Task 4: Enable automated user provisioning
 
 19.	In the menu on the left, click **Provisioning**.
 20.	Set the Provisioning Mode to Automatic.
@@ -67,7 +67,7 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 29.	To enable the Azure AD provisioning service for Salesforce, change the Provisioning Status to On in the Settings section. Click Save.
 
 
-##Task 5: Configure single sign-on for Azure AD
+## Task 5: Configure single sign-on for Azure AD
 
 30.	In the Azure portal, on the Salesforce application integration page, click Single sign-on.
 31.	On the Select a single sign-on method, select SAML to enable single sign-on.
@@ -80,7 +80,7 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 33.	On the SAML Signing Certificate, click on download certificate.
 34.	On the Set up Salesforce section, click Configure Salesforce, copy the SAML Entity ID and SAML Single Sign-On Service URL.
 
-##Task 6: Set up Salesforce for single sign-on
+## Task 6: Set up Salesforce for single sign-on
 
 35.	Open a new tab in your browser and log in to your Salesforce administrator account.
 36.	Click on the Setup under settings icon on the top right corner of the page.
@@ -103,7 +103,7 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 44.	Scroll down to the Authentication Configuration section, and click the Edit button.
 45.	In the Authentication Configuration section, Check the SSO Ignite demo as Authentication Service of your SAML SSO configuration, and then click Save.
 
-##Task 7: Testing single sign-on
+## Task 7: Testing single sign-on
 
 46.	In the Azure portal, on the Salesforce application integration page, click Single sign-on.
 47.	On the Test single sign-on with Salesforce section, click Test.
