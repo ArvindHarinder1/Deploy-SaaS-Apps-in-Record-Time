@@ -109,3 +109,24 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 47.	On the Test single sign-on with Salesforce section, click Test.
 48.	Click on Sign in as current user. 
 49.	You will be redirected to the Salesforce sign-in page. Click on Log in using SSO Ignite demo. If you don’t see it, it can be located at the bottom of the page.
+
+## Optional tasks
+
+### Create a conditional access policies for blocking all users to access Salesforce
+
+50. In the Azure portal, on the Salesforce application integration page, click **Conditional Access.**
+51. At the top of the blade, click on **New Policy**.
+52. In the Name field enter: *Blocking all users to access Salesforce*
+53. Under Assignments, select **Users and Groups**. Then, select **Include - All Users**.
+54. Click **done**.
+55. Under Access Control, select **Grant**. Then, select **Block access**.
+56. Click **Select**.
+57. Under Enable policy, select **On**.
+58. Click on **Create**, to create the policy.
+
+### Test conditional access policy
+
+59. In the Azure portal, on the Salesforce application integration page, click Single sign-on.
+47.	On the Test single sign-on with Salesforce section, click Test.
+48.	Click on Sign in as current user. 
+49.	You will be redirected to the Salesforce sign-in page. Click on Log in using SSO Ignite demo. If you don’t see it, it can be located at the bottom of the page.
