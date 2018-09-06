@@ -21,7 +21,7 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 
 ## Task 1: Create a Salesforce developers account
 
-1.	Sign up for a Salesforce developer instance using a valid email address.
+1.	[Sign up](https://developer.salesforce.com/signup) for a Salesforce developer instance using a valid email address.
 2.	Go to your email inbox to verify the account. After login for the first time, Salesforce may send an extra verification code to your email.
 3.	For future steps, you need to get your Salesforce security token, Open a new tab and sign into the same Salesforce admin account. On the top right corner of the page, click the view profile icon, and then click **Settings**
 4.	On the left navigation pane, click **My Personal Information** to expand the related section, and then click **Reset My Security Token**.
@@ -34,7 +34,7 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 
 ## Task 2: Add Salesforce from the gallery
 
-10.	In the [Azure portal](https://portal.azure.com/), on the left navigation panel, click **Azure Active Directory** icon.
+10.	Using the Office 365 credentials provided in the Resource tab, access the [Azure portal](https://portal.azure.com/). Then, on the left navigation panel, click **Azure Active Directory** icon.
 11.	Navigate to **Enterprise applications**. Then go to **All applications**.
 12.	To add new application, click **New application** button on the top of dialog.
 13.	In the search box, type Salesforce, select Salesforce from result panel then click **Add** button to add the application.
@@ -44,7 +44,7 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 14.	In the menu on the left, click **Users and groups.**
 15.	Click **Add user** button. Then select **Users** on Add Assignment dialog.
 16.	On Users dialog, select the test user from the Users list. Click **Select** button. 
-17.	On **Select Role** dialog, select Chatter External User. Click **Select** button. 
+17.	On **Select Role** dialog, select Chatter Free User. Click **Select** button. 
 18.	Click **Assign** button on **Add Assignment** dialog.
 
 ## Task 4: Enable automated user provisioning
@@ -52,8 +52,9 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 19.	In the menu on the left, click **Provisioning**.
 20.	Set the Provisioning Mode to Automatic.
 21.	Under the Admin Credentials section, provide the following configuration settings:	
-	- In the **Admin Username** textbox, type a Salesforce account name that has the System Administrator profile in Salesforce.com assigned.
-	- In the **Admin Password** textbox, type the password for this account.
+	- In the **Admin Username**, type a Salesforce account name that has the System Administrator profile in Salesforce.com assigned.
+	- In the **Admin Password**, type the password for this account.
+	- In the **Secret Token**, paste the security token value you have saved previously. 
 22. In the Azure portal, click Test Connection to ensure Azure AD can connect to your Salesforce app.
 23.	Click Save. 
 24.	Under the Mappings section, select **Synchronize Azure Active Directory Users to Salesforce**.
@@ -61,7 +62,7 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 26.	On Edit Attribute dialog, perform the following actions
 	- In the **Mapping type**, select Direct
 	- In the **Source attribute**, select userPrincipalName
-	- In the **Target attribute**, select FederationIDentifier
+	- In the **Target attribute**, select FederationIdentifier
 27.	Click Ok.
 28.	Click Save at the top of the Attribute Mapping section
 29.	To enable the Azure AD provisioning service for Salesforce, change the Provisioning Status to On in the Settings section. Click Save.
@@ -77,8 +78,8 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 	- In the **Identifier** textbox, type the value using the following pattern:
 	*https://<subdomain>-dev-ed.my.salesforce.com*
 
-33.	On the SAML Signing Certificate, click on download certificate.
-34.	On the Set up Salesforce section, click Configure Salesforce, copy the SAML Entity ID and SAML Single Sign-On Service URL.
+33.	On the SAML Signing Certificate, click on download certificate. You will import this certificate later in Salesforce.
+34.	On the Set up Salesforce section, copy the SAML Entity ID and SAML Single Sign-On Service URL.You will use this information later in Salesforce.
 
 ## Task 6: Set up Salesforce for single sign-on
 
@@ -87,16 +88,16 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 37.	Scroll down to the **SETTINGS** in the navigation pane, click Identity to expand the related section. Then click Single Sign-On Settings.
 38.	On the Single Sign-On Settings page, click the Edit button.
 39.	Select SAML Enabled, and then click Save.
-40.	To configure your SAML single sign-on settings, click New.
+40.	Click New to configure SAML single sign-on settings.
 41.	On the SAML Single Sign-On Setting Edit page, make the following configurations:
-	- For the **Name** field, type SSO Ignite demo.
-	- In the **Issuer** field, paste the value of SAML Entity ID, which you have copied from Azure portal.
-	- In the **Entity Id** textbox, type your Salesforce domain name using the following pattern: *https://<subdomain>-dev-ed.my.salesforce.com*
+	- For the **Name**, type SSO Ignite demo.
+	- In the **Issuer**, paste the value of SAML Entity ID, which you have copied from Azure portal.
+	- In the **Entity Id**, type your Salesforce domain name using the following pattern: *https://<subdomain>-dev-ed.my.salesforce.com*
 	- To upload the Identity Provider Certificate, click **Choose File** to browse and select the certificate file, which you have downloaded from Azure portal.
-	- As **SAML Identity Type**, choose one of the following options:		- Select Assertion contains the Federation ID from the User object, if Federation ID from the User object is being passed in SAML assertion
+	- As **SAML Identity Type**, choose: Assertion contains the Federation ID from the User object
 	- For **SAML Identity Location**, select Identity is in the NameIdentifier element of the Subject statement.
 	- For **Service Provider Initiated Request Binding**, select HTTP Redirect.
-	- In **Identity Provider Login URL** textbox, paste the value of Single Sign-On Service URL, which you have copied from Azure portal
+	- In **Identity Provider Login URL**, paste the value of Single Sign-On Service URL, which you have copied from Azure portal
 	
 42.	Finally, click Save to apply your SAML single sign-on settings.
 43.	On the left navigation pane in Salesforce, click Company Settings to expand the related section, and then click My Domain.
