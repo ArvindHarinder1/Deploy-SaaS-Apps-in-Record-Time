@@ -92,13 +92,13 @@ In this tutorial, you will learn how to integrate Salesforce with Azure Active D
 40.	Click New to configure SAML single sign-on settings.
 41.	On the SAML Single Sign-On Setting Edit page, make the following configurations:
 	- For the **Name**, type SSO Ignite demo.
-	- In the **Issuer**, paste the value of SAML Entity ID, which you have copied from Azure portal.
+	- In the **Issuer**, paste the value of SAML Entity ID (you can find this by clicking **view step-by-step" instructions** in the Azure Portal SSO configuration page and copying the entity id from step 5).
 	- In the **Entity Id**, type your Salesforce domain name using the following pattern: *https://<subdomain>-dev-ed.my.salesforce.com*
 	- To upload the Identity Provider Certificate, click **Choose File** to browse and select the certificate file, which you have downloaded from Azure portal.
 	- As **SAML Identity Type**, choose: Assertion contains the Federation ID from the User object
 	- For **SAML Identity Location**, select Identity is in the NameIdentifier element of the Subject statement.
 	- For **Service Provider Initiated Request Binding**, select HTTP Redirect.
-	- In **Identity Provider Login URL**, paste the value of Single Sign-On Service URL, which you have copied from Azure portal
+	- In **Identity Provider Login URL**, paste the value of Single Sign-On Service URL, which you have copied from Azure portal (step 1 of the SSO configuration page) 
 	
 42.	Finally, click Save to apply your SAML single sign-on settings.
 43.	On the left navigation pane in Salesforce, click Company Settings to expand the related section, and then click My Domain.
@@ -107,7 +107,7 @@ In this tutorial, you will learn how to integrate Salesforce with Azure Active D
 
 ## Task 7: Testing single sign-on
 
-46.	In the Azure portal, on the Salesforce application integration page, click Single sign-on.
+46.	In the Azure portal, on the Salesforce application integration page, click Single sign-on (step 5).
 47.	On the Test single sign-on with Salesforce section, click Test.
 48.	Click on Sign in as current user. 
 49.	You will be redirected to the Salesforce sign-in page. Click on Log in using SSO Ignite demo. If you don’t see it, it can be located at the bottom of the page.
