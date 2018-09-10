@@ -1,11 +1,11 @@
 # Introduction
 
-In this tutorial, you learn how to integrate Salesforce with Azure Active Directory (Azure AD). The scenario outlined in this tutorial consists of:
+In this tutorial, you will learn how to integrate Salesforce with Azure Active Directory (Azure AD). The scenario outlined in this tutorial consists of:
 
-1.	Creating a Salesforce developers account
-2.	Adding Salesforce app from the Azure AD gallery
-3.	Assign users to the Salesforce application in Azure AD
-4.	Configuring and testing user provisioning
+1.	Creating a Salesforce developer account
+2.	Adding the Salesforce app to your tenant from the Azure AD gallery
+3.	Assigning users to the Salesforce application in Azure AD
+4.	Configuring and testing user account provisioning
 5.	Configuring Azure AD single sign-on
 6.	Configure Salesforce for single sign-on
 7.	Testing single sign-on
@@ -19,11 +19,11 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 
 # Integrate Salesforce with Azure Active Directory for Single sign-on
 
-## Task 1: Create a Salesforce developers account
+## Task 1: Create a Salesforce developer account
 
 1.	Sign up for a Salesforce developer instance using a valid email address.
-2.	Go to your email inbox to verify the account. After login for the first time, Salesforce may send an extra verification code to your email.
-3.	For future steps, you need to get your Salesforce security token, Open a new tab and sign into the same Salesforce admin account. On the top right corner of the page, click the view profile icon, and then click **Settings**
+2.	Go to your email inbox to verify the account. After signing in for the first time, Salesforce may send an extra verification code to your email.
+3.	Open a new tab and sign into the same Salesforce admin account. On the top right corner of the page, click the view profile icon, and then click **Settings**
 4.	On the left navigation pane, click **My Personal Information** to expand the related section, and then click **Reset My Security Token**.
 5.	On the Reset Security Token page, click **Reset Security Token button**.
 6.	Check the email inbox associated with this admin account. Look for an email from Salesforce.com that contains the new security token. Save the security token. You will need it later.
@@ -35,14 +35,14 @@ In this tutorial, you learn how to integrate Salesforce with Azure Active Direct
 ## Task 2: Add Salesforce from the gallery
 
 10.	In the [Azure portal](https://portal.azure.com/), on the left navigation panel, click **Azure Active Directory** icon.
-11.	Navigate to **Enterprise applications**. Then go to **All applications**.
-12.	To add new application, click **New application** button on the top of dialog.
-13.	In the search box, type Salesforce, select Salesforce from result panel then click **Add** button to add the application.
+11.	Click on **Enterprise applications** in the left hand menu. 
+12.	To add a new application, click the **New application** button at the top of the page.
+13.	In the search box, type Salesforce and select it from the results panel. click the **Add** button to add the application.
 
 ## Task 3: Assign a test user to the application
 
 14.	In the menu on the left, click **Users and groups.**
-15.	Click **Add user** button. Then select **Users** on Add Assignment dialog.
+15.	Click the **Add user** button. Then select **Users** on Add Assignment dialog.
 16.	On Users dialog, select the test user from the Users list. Click **Select** button. 
 17.	On **Select Role** dialog, select Chatter External User. Click **Select** button. 
 18.	Click **Assign** button on **Add Assignment** dialog.
